@@ -1,0 +1,35 @@
+cat > .gitignore << 'EOF'
+# Ignore all CSVs everywhere
+*.csv
+**/*.csv
+
+# Ignore the whole data folder just in case
+data/
+EOF
+
+# Data files
+data/*.csv
+data/**/*.csv
+!data/.gitkeep
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
+
+# Models
+models/*
+outputs/*__pycache__/
+.ipynb_checkpoints/
+*.log
+.env
+*.sqlite
+.DS_Store
+favorita-grocery-sales-forecasting.zip
+delete_after.ipynb

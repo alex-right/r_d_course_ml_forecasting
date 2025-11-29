@@ -1,0 +1,31 @@
+Висновки
+
+Опишіть, які тенденції ви виявили.
+Яка модель показала найкращий результат і чому.
+Які чинники могли б покращити прогноз (наприклад, додаткові фічі або зовнішні дані).
+
+The objective of this exercise was to train a model on the full dataset, 
+generate item-level predictions for each store, aggregate these predictions 
+to daily values, and then evaluate the model’s performance against baseline 
+approaches such as Prophet, ARIMA. The baseline models achieved an R² of approximately 
+0.6 and could likely be improved further with additional feature engineering. 
+However, refining the baselines was not part of the assigned task; establishing 
+their performance level was sufficient. Note, that the level of aggregation in the provided 
+data.csv file appears to not correspont directly with the aggreation I used in Model 3, therefore, 
+comparing Model 3 R2 with Model 1,2 R2 should be done with caution. The data.csv is likely an 
+aggregated subsample while I used aggregation on the whole sample.
+
+After setting the baseline, I proceeded to train a more sophisticated model—XGBoost—
+on the full dataset. Due to computational constraints, the model was trained on a 
+representative sample of the data. Validation results indicate that the chosen sample 
+was appropriate. While the item-level R² on the test set was relatively low (around 0.3), 
+the aggregated daily-level R² exceeded 0.9. This demonstrates that, for the intended 
+purpose—accurate prediction of daily aggregated sales—the modeling approach is effective.
+
+The forecasts could potentially be improved through more extensive feature engineering, 
+including classical time-series features such as rolling means, as well as additional dataset 
+variables like oil prices, which were not incorporated in this analysis. Also, finetuning the model
+could be another potential source of impovments. 
+
+Nevertheless, given that the aggregated daily predictions achieve an R² above 0.9, the results are 
+sufficiently strong for the goals of this exercise.
